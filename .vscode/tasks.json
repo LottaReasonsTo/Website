@@ -4,9 +4,23 @@
     {
       "label": "Deploy",
       "type": "shell",
-      "command": "git add .; git commit -m \"Auto deploy\"; git push",
+      "command": "git",
+      "args": ["add", "."],
       "group": { "kind": "build", "isDefault": true },
+      "dependsOn": ["commit", "push"],
       "problemMatcher": []
+    },
+    {
+      "label": "commit",
+      "type": "shell",
+      "command": "git",
+      "args": ["commit", "-m", "Auto deploy"]
+    },
+    {
+      "label": "push",
+      "type": "shell",
+      "command": "git",
+      "args": ["push"]
     }
   ]
 }
