@@ -1,9 +1,0 @@
-site:
-  title: portfolio
-  description: where i talk about how cool i am
-  url: cool.portfolio
-  authorName: Guy Coolperson
-  authorUrl: https://coolperson.com/
-  authorEmail: contact@coolperson.com
-contentDefaults:
-  template: default.html
