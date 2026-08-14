@@ -5,10 +5,17 @@
       "label": "Deploy",
       "type": "shell",
       "command": "git",
-      "args": ["add", "."],
+      "args": ["pull", "--rebase"],
       "group": { "kind": "build", "isDefault": true },
-      "dependsOn": ["commit", "push"],
+      "dependsOn": ["add", "commit", "push"],
+      "dependsOrder": "sequence",
       "problemMatcher": []
+    },
+    {
+      "label": "add",
+      "type": "shell",
+      "command": "git",
+      "args": ["add", "-A"]
     },
     {
       "label": "commit",
